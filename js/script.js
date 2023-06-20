@@ -7,7 +7,7 @@ Consigli:
 
 1)creare un array con una lista della spesa*/
 
-const listaSpesa = [
+const list = [
     'avocado',
     'uova',
     'tonno',
@@ -18,4 +18,19 @@ const listaSpesa = [
     'olio',
     'parmigiano reggiano',
 ];
- console.log(listaSpesa , 'Lista Della Spesa' , typeof listaSpesa);
+
+console.log(list , 'list' , typeof list);
+
+let listaContainer = document.querySelector('.lista-della-spesa');
+
+let i = 0;
+
+while (i < list.length) {
+
+    let li = document.createElement('li');
+    let item_list = list[i];
+    li.innerText = item_list;
+    listaContainer.appendChild(li);
+
+    i++;
+};
